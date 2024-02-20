@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Credit Score:Home</title>
+        <link rel="stylesheet" type= "text/css" href="/static/css/style.css"></link>
+    </head>
+    <body>
+        <header>
+            <img src="/static/images/logo2.png" alt="Financial Organization Logo">
+        </header>
+     <form method="post" action="{{url_for('predict_result')}}">
+            <h1>Credit Score Predictor</h1>
+
+            <label for="id">Customer ID </label>
+            <input type="text" id="id" name="customer_id" required>
+
+            <label for="month">Month</label>
+            <select id="month" name="month" required>
+              <option value="">Select a month</option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+
+            <label for="annual income">Annual Income</label>
+            <input type="text" name="annual income" required>
+
+            <label for="credit cards">Number of Credit Cards </label>
+            <input type="text" name="credit cards" required>
+
+            <label for="interest rate">Interest Rate</label>
+            <input type="text" name="interest rate" required>
+
+            <label for="due date">Delay from Due Date </label>
+            <input type="text" name="due date" required>
+
+            <label for="inquiries">Number of Inquiries</label>
+            <input type="text" name="inquiries" required>
+
+            <label for="mix">Credit Mix </label>
+            <select name="mix" required>
+              <option value="">Select a credit mix</option>
+              <option value="2">Standard</option>
+              <option value="1">Good</option>
+                <option value="0">Bad</option>
+            </select>
+
+            <label for="debt">Outstanding Debt </label>
+            <input type="text" name="debt" required>
+
+            <label for="history age">Credit History Age </label>
+            <input type="text" name="history age" required>
+
+            <label for="invested monthly">Amount Invested Monthly </label>
+            <input type="text" name="invested monthly" required>
+
+            <button type="submit">PREDICT</button>
+
+        </form>
+
+
+
+
+</body>
+</html>
